@@ -8,13 +8,13 @@ import { useTheme } from "@mui/material";
 import { CBTimelineProps } from "./CBTimelineInterfaces";
 import { useCBTimelineStyles } from "./CBTimelineStyles";
 
-function CBTimeline(props: CBTimelineProps): JSX.Element {
+function CBTimeline({ bulletPoints }: CBTimelineProps): JSX.Element {
   const styles = useCBTimelineStyles();
   const theme = useTheme();
 
   return (
     <Timeline sx={styles.timeline}>
-      {props.bulletPoints.map((bulletPoint, index, array) => (
+      {bulletPoints.map((bulletPoint, index, array) => (
         // eslint-disable-next-line react/no-array-index-key
         <TimelineItem key={index}>
           <TimelineSeparator>

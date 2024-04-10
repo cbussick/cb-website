@@ -1,11 +1,8 @@
-import { SystemStyleObject } from "@mui/system";
 import { getCBGradient } from "../../helpers/getCBGradient";
 import { makeSx } from "../../helpers/makeSx";
 import { CBHeaderStylesProps } from "./CBHeaderInterfaces";
 
-const mobileMenuButtonStyles = (
-  isInsideDrawer: boolean,
-): SystemStyleObject => ({
+const mobileMenuButtonStyles = (isInsideDrawer: boolean) => ({
   ".hamburger-react": {
     // Don't have the mobile menu icon blocked by the logo when it is absolutely positioned
     // on small viewports

@@ -6,16 +6,17 @@ import { useCBCVCardStyles } from "./CBCVCardStyles";
 /**
  * A simple wrapper which allows reusing the styling for all cards inside the CV section.
  */
-function CBCVCard(props: CBCVCardProps): JSX.Element {
+function CBCVCard({ title, children }: CBCVCardProps): JSX.Element {
   const styles = useCBCVCardStyles();
 
   return (
     <Card component={Stack} spacing={5}>
       <CardHeader
-        title={<CBTextGradient variant="h2">{props.title}</CBTextGradient>}
+        title={<CBTextGradient variant="h2">{title}</CBTextGradient>}
         sx={styles.cardHeader}
       />
-      {props.children}
+
+      {children}
     </Card>
   );
 }

@@ -3,9 +3,12 @@ import { getHeaderLinkForSection } from "../CBHeader/headerLinkData";
 import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
 import { useCBSectionContainerStyles } from "./CBSectionContainerStyles";
 
-function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
-  const sectionId = getHeaderLinkForSection(props.section)?.id;
-  const styles = useCBSectionContainerStyles(props);
+function CBSectionContainer({
+  section,
+  children,
+}: CBSectionContainerProps): JSX.Element {
+  const sectionId = getHeaderLinkForSection(section)?.id;
+  const styles = useCBSectionContainerStyles({ section, children });
 
   return (
     <Container sx={styles.outerContainer} maxWidth={false}>
@@ -16,7 +19,7 @@ function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
         // when the returned `sectionId` is an empty string ("")
         id={sectionId || undefined}
       >
-        <Stack spacing={{ xs: 5, md: 10 }}>{props.children}</Stack>
+        <Stack spacing={{ xs: 5, md: 10 }}>{children}</Stack>
       </Container>
     </Container>
   );
