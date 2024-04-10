@@ -20,6 +20,6 @@ export const headerLinks: HeaderLink[] = [
 ];
 
 export const getHeaderLinkForSection = (
-  section: Section
+  section: Section,
 ): HeaderLink | undefined =>
   headerLinks.find((link) => link.section === section);

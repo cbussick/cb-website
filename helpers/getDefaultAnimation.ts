@@ -23,7 +23,7 @@ const viewport: MotionProps["viewport"] = {
 const layout: MotionProps["layout"] = true;
 
 export const getDefaultAnimation = (
-  delay?: number
+  delay?: number,
 ): Pick<
   MotionProps,
   "variants" | "layout" | "initial" | "whileInView" | "viewport"

@@ -20,7 +20,7 @@ export const getBorderGradient = (
   objectBackgroundColor: string,
   gradient: string,
   borderWidth: number,
-  side?: BorderSide | BorderSide[]
+  side?: BorderSide | BorderSide[],
 ): CSSProperties => {
   const border = `${borderWidth}px solid transparent`;
 

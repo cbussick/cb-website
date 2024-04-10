@@ -4,7 +4,7 @@ import { makeSx } from "../../helpers/makeSx";
 import { CBHeaderStylesProps } from "./CBHeaderInterfaces";
 
 const mobileMenuButtonStyles = (
-  isInsideDrawer: boolean
+  isInsideDrawer: boolean,
 ): SystemStyleObject => ({
   ".hamburger-react": {
     // Don't have the mobile menu icon blocked by the logo when it is absolutely positioned

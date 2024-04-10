@@ -22,7 +22,7 @@ import { SxProps, Theme } from "@mui/material";
  */
 export const mergeSx = (
   sx?: SxProps<Theme>,
-  sxToMerge?: SxProps<Theme>
+  sxToMerge?: SxProps<Theme>,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
 ): SxProps<Theme> => [
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

@@ -2,7 +2,7 @@ export const scrollToElement = (
   e:
     | React.MouseEvent<HTMLAnchorElement, MouseEvent>
     | React.MouseEvent<HTMLSpanElement, MouseEvent>,
-  selector: string | undefined
+  selector: string | undefined,
 ): void => {
   if (selector) {
     const element = document.querySelector(selector);
@@ -20,7 +20,7 @@ export const scrollToElement = (
     window.history.pushState(
       "",
       document.title,
-      window.location.pathname + window.location.search
+      window.location.pathname + window.location.search,
     );
   }
 };

@@ -15,7 +15,7 @@ function CBCVSection(): JSX.Element {
   ));
 
   const workExperienceBulletPoints: JSX.Element[] = workExperienceData.map(
-    (entry) => <CVBulletPoint key={entry.title} {...entry} />
+    (entry) => <CVBulletPoint key={entry.title} {...entry} />,
   );
 
   return (
