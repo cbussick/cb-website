@@ -1,3 +1,25 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:react/jsx-runtime",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "arrow-body-style": "off",
+    "prefer-destructuring": "warn",
+    "no-empty-pattern": "warn",
+    "comma-dangle": "warn",
+    "react/function-component-definition": "off",
+    "react/jsx-newline": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-key": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "import/order": "warn"
+  }
 }
