@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "path": "./..",
+    },
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#FFC107",
+      "activityBar.foreground": "#000000",
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescriptreact",
+      "typescript",
+    ],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.formatDocument": "explicit",
+      "source.fixAll.eslint": "explicit",
+      "source.addMissingImports": "explicit",
+      "source.organizeImports": "explicit",
+    },
+    "codeTemplateTool.templatesPath": "{workspace}/.vscode/templates",
+  },
+}
