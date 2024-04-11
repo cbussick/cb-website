@@ -1,4 +1,4 @@
-import { Grid2Props, Typography } from "@mui/material";
+import { Box, BoxProps, Grid2Props, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +14,17 @@ const gridItemProps: Grid2Props = {
   lg: 3,
   xl: 2,
   sx: { maxWidth: { xs: 300, sm: 1000 } },
+};
+
+const commonImageLinkProps = {
+  target: "_blank",
+  rel: "noreferrer",
+};
+
+const commonImageContainerProps: BoxProps = {
+  position: "relative",
+  width: "100%",
+  height: 175,
 };
 
 function CBSkillset(): JSX.Element {
@@ -37,74 +48,79 @@ function CBSkillset(): JSX.Element {
 
       <Grid2 container spacing={12} sx={styles.grid}>
         <Grid2 {...gridItemProps}>
-          <Link href="https://reactjs.org/" target="_blank" rel="noreferrer">
-            <Image src="/resources/react-logo.svg" alt="React Logo" fill />
+          <Link href="https://reactjs.org/" {...commonImageLinkProps}>
+            <Box {...commonImageContainerProps}>
+              <Image src="/resources/react-logo.svg" alt="React Logo" fill />
+            </Box>
           </Link>
         </Grid2>
 
         <Grid2 {...gridItemProps}>
           <Link
             href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noreferrer"
+            {...commonImageLinkProps}
           >
-            <Image
-              src="/resources/typescript-logo.svg"
-              alt="TypeScript Logo"
-              fill
-            />
+            <Box {...commonImageContainerProps}>
+              <Image
+                src="/resources/typescript-logo.svg"
+                alt="TypeScript Logo"
+                fill
+              />
+            </Box>
           </Link>
         </Grid2>
 
         <Grid2 {...gridItemProps}>
-          <Link
-            href="https://www.unrealengine.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src="/resources/ue-logo.svg" alt="Unreal Engine Logo" fill />
+          <Link href="https://www.unrealengine.com/" {...commonImageLinkProps}>
+            <Box {...commonImageContainerProps}>
+              <Image
+                src="/resources/ue-logo.svg"
+                alt="Unreal Engine Logo"
+                fill
+              />
+            </Box>
           </Link>
         </Grid2>
 
         <Grid2 {...gridItemProps}>
-          <Link
-            href="https://www.meta.com/quest/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/resources/meta-quest-logo.svg"
-              alt="Meta Quest Logo"
-              fill
-            />
+          <Link href="https://www.meta.com/quest/" {...commonImageLinkProps}>
+            <Box {...commonImageContainerProps}>
+              <Image
+                src="/resources/meta-quest-logo.svg"
+                alt="Meta Quest Logo"
+                fill
+              />
+            </Box>
           </Link>
         </Grid2>
 
         <Grid2 {...gridItemProps}>
           <Link
             href="https://www.adobe.com/products/photoshop.html"
-            target="_blank"
-            rel="noreferrer"
+            {...commonImageLinkProps}
           >
-            <Image
-              src="/resources/photoshop-logo.svg"
-              alt="Photoshop Logo"
-              fill
-            />
+            <Box {...commonImageContainerProps}>
+              <Image
+                src="/resources/photoshop-logo.svg"
+                alt="Photoshop Logo"
+                fill
+              />
+            </Box>
           </Link>
         </Grid2>
 
         <Grid2 {...gridItemProps}>
           <Link
             href="https://www.adobe.com/products/illustrator.html"
-            target="_blank"
-            rel="noreferrer"
+            {...commonImageLinkProps}
           >
-            <Image
-              src="/resources/illustrator-logo.svg"
-              alt="Illustrator Logo"
-              fill
-            />
+            <Box {...commonImageContainerProps}>
+              <Image
+                src="/resources/illustrator-logo.svg"
+                alt="Illustrator Logo"
+                fill
+              />
+            </Box>
           </Link>
         </Grid2>
       </Grid2>
