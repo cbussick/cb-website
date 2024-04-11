@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 import { Twirl as Hamburger } from "hamburger-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
@@ -41,6 +42,7 @@ const mobileMenuButtonStyles = (isInsideDrawer: boolean) => ({
 
 function CBHeader(): JSX.Element {
   const theme = useTheme();
+  const router = useRouter();
 
   const isPageScrolled = useScrollTrigger({
     disableHysteresis: true,
@@ -108,7 +110,7 @@ function CBHeader(): JSX.Element {
         key={link.id}
         href={selector}
         onClick={(e) => {
-          scrollToElement(e, selector);
+          scrollToElement(e, selector, router);
         }}
         startIcon={<link.icon />}
         sx={{
