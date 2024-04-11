@@ -27,7 +27,7 @@ function CBHeader(): JSX.Element {
   const isPageScrolled = useScrollTrigger({
     disableHysteresis: true,
     threshold: 10,
-    target: window,
+    target: typeof window === "undefined" ? undefined : window,
   });
 
   const isMobileViewport = useMediaQuery(theme.breakpoints.down("md"));
