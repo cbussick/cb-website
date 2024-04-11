@@ -1,7 +1,7 @@
 "use client";
 
 import { CBStyledLink } from "@/components/CBStyledLink/CBStyledLink";
-import { Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cbContactInformation } from "../../../data/cbContactInformation";
@@ -77,16 +77,17 @@ function CBHomeSection(): JSX.Element {
         component={motion.figure}
         {...getDefaultAnimation(0.6)}
       >
-        <Image
-          src="/resources/me-and-bruno.jpg"
-          alt="Me and Bruno"
-          width={650}
-          height={400}
-          style={{
-            maxWidth: "100%",
-            boxShadow: theme.shadows[10],
-          }}
-        />
+        <Box width={600} height={450} position="relative">
+          <Image
+            src="/resources/me-and-bruno.jpg"
+            alt="Me and Bruno"
+            fill
+            style={{
+              objectFit: "cover",
+              boxShadow: theme.shadows[10],
+            }}
+          />
+        </Box>
 
         <Typography variant="caption" component="figcaption">
           Me and Bruno :)
