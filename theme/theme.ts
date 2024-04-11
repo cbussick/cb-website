@@ -9,6 +9,9 @@ const theme = createTheme({
     secondary: {
       main: "#03A9F4",
     },
+    text: {
+      primary: "#737373",
+    },
   },
   typography: {
     // We are using `next/font` to load the font.
