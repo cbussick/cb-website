@@ -19,10 +19,12 @@ function CBContactSection(): JSX.Element {
       >
         <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
       </Typography>
+
       <Typography component={motion.div} {...getDefaultAnimation(0.3)}>
         If you have any questions or want to talk about something, just send me
         a message :)
       </Typography>
+
       <Typography
         component={motion.div}
         {...getDefaultAnimation(0.6)}

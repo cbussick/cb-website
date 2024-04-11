@@ -72,8 +72,11 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
         }}
         sx={styles.cardHeader}
       />
+
       <Divider sx={styles.divider} />
+
       {cardMedia}
+
       <CardContent sx={styles.cardContent}>
         <Typography
           variant="body2"
@@ -83,6 +86,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
           {project.description}
         </Typography>
       </CardContent>
+
       <CardActions disableSpacing sx={styles.cardActions}>
         {project.url && (
           <Button

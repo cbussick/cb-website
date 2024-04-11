@@ -17,11 +17,13 @@ export const projects: Project[] = [
         you put on a VR headset and do meaningful tasks in a virtual world while
         also doing exercise in the real world? For this reason I developed the
         VR Office Exercises as part of my bachelor thesis at the `}
+
         <Link href={whWebsite} target="_blank">
           WH
         </Link>
-        . The player finds himself on a farm, helping an elderly farmer with
-        harvesting and other tasks.
+
+        {`. The player finds himself on a farm, helping an elderly farmer with
+        harvesting and other tasks.`}
       </>
     ),
     techStack: ["Unreal Engine", "Blueprints", "Meta Quest 2"],
@@ -59,14 +61,16 @@ export const projects: Project[] = [
         {`A bpm tapper is a tool used in music production to figure out the tempo
         of a song, measured in beats per minute (bpm). The tool is usually part
         of a `}
+
         <Link
           href="https://en.wikipedia.org/wiki/Digital_audio_workstation"
           target="_blank"
         >
           DAW
         </Link>
-        , installed on a computer. This project is meant to make the tool
-        browser-based.
+
+        {`, installed on a computer. This project is meant to make the tool
+        browser-based.`}
       </>
     ),
     techStack: ["React", "TypeScript", "Chakra UI"],
