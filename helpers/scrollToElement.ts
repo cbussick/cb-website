@@ -16,6 +16,7 @@ export const scrollToElement = (
   } else {
     // Scroll back up to the top of the page
     const element = document.querySelector("body");
+    e.preventDefault();
     element?.scrollIntoView({ behavior: "smooth" });
 
     router.push("");
