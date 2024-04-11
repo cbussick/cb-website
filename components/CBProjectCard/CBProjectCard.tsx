@@ -10,6 +10,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 import ReactPlayer from "react-player";
 import { ProjectThumbnailType } from "../../interfaces/Project";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
@@ -53,9 +54,13 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
     <>
       <CardHeader
         title={
-          <a href={project.url} target="_blank" rel="noreferrer">
-            {project.name}
-          </a>
+          project.url ? (
+            <Link href={project.url || ""} target="_blank" rel="noreferrer">
+              {project.name}
+            </Link>
+          ) : (
+            project.name
+          )
         }
         titleTypographyProps={{
           variant: "h3",
@@ -89,15 +94,15 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
 
       <CardActions disableSpacing sx={styles.cardActions}>
         {project.url && (
-          <Button
-            variant="contained"
-            aria-label="go to the project"
-            endIcon={<DoubleArrow />}
-            href={project.url}
-            target="_blank"
-          >
-            <Typography variant="body2">Take me to the project!</Typography>
-          </Button>
+          <Link href={project.url} target="_blank">
+            <Button
+              variant="contained"
+              aria-label="go to the project"
+              endIcon={<DoubleArrow />}
+            >
+              <Typography variant="body2">Take me to the project!</Typography>
+            </Button>
+          </Link>
         )}
       </CardActions>
     </>

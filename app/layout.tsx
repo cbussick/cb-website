@@ -14,7 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={font.className}>
+    <html
+      lang="en"
+      className={font.className}
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body>
         <main>
           <ThemeRegistry>

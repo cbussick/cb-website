@@ -1,6 +1,7 @@
 "use client";
 
-import { Link, Stack, Typography, useTheme } from "@mui/material";
+import { CBStyledLink } from "@/components/CBStyledLink/CBStyledLink";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cbContactInformation } from "../../../data/cbContactInformation";
@@ -36,27 +37,27 @@ function CBHomeSection(): JSX.Element {
 
         {`I do software development for both the web and `}
 
-        <Link
+        <CBStyledLink
           href="https://en.wikipedia.org/wiki/Virtual_reality"
           target="_blank"
         >
           VR
-        </Link>
+        </CBStyledLink>
 
         {" and study "}
 
-        <Link
+        <CBStyledLink
           href="https://www.w-hs.de/medieninformatik-ge-master/"
           target="_blank"
         >
           media in&shy;for&shy;ma&shy;tics
-        </Link>
+        </CBStyledLink>
 
         {" at the "}
 
-        <Link href="https://www.w-hs.de/" target="_blank">
+        <CBStyledLink href="https://www.w-hs.de/" target="_blank">
           WH
-        </Link>
+        </CBStyledLink>
 
         {`
         in Gelsenkirchen, Germany 🇩🇪. Besides all
@@ -76,16 +77,17 @@ function CBHomeSection(): JSX.Element {
         component={motion.figure}
         {...getDefaultAnimation(0.6)}
       >
-        <Image
-          src="/resources/me-and-bruno.jpg"
-          alt="Me and Bruno"
-          width={650}
-          height={400}
-          style={{
-            maxWidth: "100%",
-            boxShadow: theme.shadows[10],
-          }}
-        />
+        <Box width={600} height={450} position="relative">
+          <Image
+            src="/resources/me-and-bruno.jpg"
+            alt="Me and Bruno"
+            fill
+            style={{
+              objectFit: "cover",
+              boxShadow: theme.shadows[10],
+            }}
+          />
+        </Box>
 
         <Typography variant="caption" component="figcaption">
           Me and Bruno :)

@@ -9,6 +9,9 @@ const theme = createTheme({
     secondary: {
       main: "#03A9F4",
     },
+    text: {
+      primary: "#737373",
+    },
   },
   typography: {
     // We are using `next/font` to load the font.
@@ -36,20 +39,6 @@ const themeWithOverrides: Theme = {
       styleOverrides: {
         a: {
           color: "inherit",
-        },
-      },
-    },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          color: theme.palette.text.primary,
-          textDecoration: "none",
-          transition: "0.3s",
-          background: `linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 65%, ${theme.palette.primary.light} 71%, ${theme.palette.primary.light} 94%, rgba(255,255,255,0) 100%)`,
-          "&:hover": {
-            color: theme.palette.primary.contrastText,
-            background: `linear-gradient(180deg, rgba(255,255,255,0) 0%, ${theme.palette.primary.light} 6%, ${theme.palette.primary.light} 94%, rgba(255,255,255,0) 100%)`,
-          },
         },
       },
     },

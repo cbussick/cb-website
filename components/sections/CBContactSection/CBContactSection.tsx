@@ -1,4 +1,5 @@
-import { Link, Typography } from "@mui/material";
+import { CBStyledLink } from "@/components/CBStyledLink/CBStyledLink";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
@@ -31,9 +32,9 @@ function CBContactSection(): JSX.Element {
         alignSelf="center"
       >
         You can contact me at:
-        <address>
-          <Link href={`mailto:${eMail}`}>{eMail}</Link>
-        </address>
+        <Box component="address" sx={{ fontStyle: "normal" }}>
+          <CBStyledLink href={`mailto:${eMail}`}>{eMail}</CBStyledLink>
+        </Box>
       </Typography>
     </CBSectionContainer>
   );
