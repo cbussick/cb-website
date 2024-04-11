@@ -24,7 +24,7 @@ export const useCBProjectCardStyles = () =>
     cardMedia: {
       p: 0,
       width: "100%",
-      maxHeight: 500,
+      maxHeight: 350,
       objectFit: "contain",
     },
     cardContent: {
