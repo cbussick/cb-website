@@ -14,6 +14,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { Twirl as Hamburger } from "hamburger-react";
+import Link from "next/link";
 import { useState } from "react";
 import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
@@ -50,21 +51,23 @@ function CBHeader(): JSX.Element {
   const gitHubLink = cbContactInformation.gitHub;
 
   const GitHubLinkButton = isSmallViewport ? (
-    <Button
-      href={gitHubLink}
-      startIcon={<GitHub />}
-      classes={{ startIcon: "link-icon" }}
-      sx={styles.link}
-      target="_blank"
-    >
-      <Typography variant="subtitle1" component="span" className="link-label">
-        Me on GitHub
-      </Typography>
-    </Button>
+    <Link href={gitHubLink} target="_blank">
+      <Button
+        startIcon={<GitHub />}
+        classes={{ startIcon: "link-icon" }}
+        sx={styles.link}
+      >
+        <Typography variant="subtitle1" component="span" className="link-label">
+          Me on GitHub
+        </Typography>
+      </Button>
+    </Link>
   ) : (
-    <IconButton href={gitHubLink} sx={styles.gitHubButton} target="_blank">
-      <GitHub titleAccess="Me on GitHub" />
-    </IconButton>
+    <Link href={gitHubLink} target="_blank">
+      <IconButton sx={styles.gitHubButton}>
+        <GitHub titleAccess="Me on GitHub" />
+      </IconButton>
+    </Link>
   );
 
   const headerElements: JSX.Element[] = headerLinks.map((link) => {

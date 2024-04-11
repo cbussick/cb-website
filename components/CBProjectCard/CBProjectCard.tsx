@@ -94,15 +94,15 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
 
       <CardActions disableSpacing sx={styles.cardActions}>
         {project.url && (
-          <Button
-            variant="contained"
-            aria-label="go to the project"
-            endIcon={<DoubleArrow />}
-            href={project.url}
-            target="_blank"
-          >
-            <Typography variant="body2">Take me to the project!</Typography>
-          </Button>
+          <Link href={project.url} target="_blank">
+            <Button
+              variant="contained"
+              aria-label="go to the project"
+              endIcon={<DoubleArrow />}
+            >
+              <Typography variant="body2">Take me to the project!</Typography>
+            </Button>
+          </Link>
         )}
       </CardActions>
     </>

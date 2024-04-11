@@ -1,9 +1,9 @@
 "use client";
 
+import { CBStyledLink } from "@/components/CBStyledLink/CBStyledLink";
 import { Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
@@ -37,27 +37,27 @@ function CBHomeSection(): JSX.Element {
 
         {`I do software development for both the web and `}
 
-        <Link
+        <CBStyledLink
           href="https://en.wikipedia.org/wiki/Virtual_reality"
           target="_blank"
         >
           VR
-        </Link>
+        </CBStyledLink>
 
         {" and study "}
 
-        <Link
+        <CBStyledLink
           href="https://www.w-hs.de/medieninformatik-ge-master/"
           target="_blank"
         >
           media in&shy;for&shy;ma&shy;tics
-        </Link>
+        </CBStyledLink>
 
         {" at the "}
 
-        <Link href="https://www.w-hs.de/" target="_blank">
+        <CBStyledLink href="https://www.w-hs.de/" target="_blank">
           WH
-        </Link>
+        </CBStyledLink>
 
         {`
         in Gelsenkirchen, Germany 🇩🇪. Besides all

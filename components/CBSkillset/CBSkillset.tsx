@@ -3,6 +3,7 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Image from "next/image";
 import Link from "next/link";
 import CBCVCard from "../CBCard/CBCVCard";
+import { CBStyledLink } from "../CBStyledLink/CBStyledLink";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { useCBSkillsetStyles } from "./CBSkillsetStyles";
 
@@ -23,12 +24,12 @@ function CBSkillset(): JSX.Element {
       <Typography sx={{ textAlign: "justify" }}>
         {`These are the technologies I am proficient with and which I `}
 
-        <Link
+        <CBStyledLink
           href="https://en.wikipedia.org/wiki/Law_of_the_instrument"
           target="_blank"
         >
           usually
-        </Link>
+        </CBStyledLink>
 
         {` rely on when building projects. I am always interested in learning new
         stuff 🚀`}

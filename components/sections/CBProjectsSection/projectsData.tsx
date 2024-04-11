@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { CBStyledLink } from "@/components/CBStyledLink/CBStyledLink";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
 
 const whWebsite = "https://www.w-hs.de/";
@@ -18,9 +18,9 @@ export const projects: Project[] = [
         also doing exercise in the real world? For this reason I developed the
         VR Office Exercises as part of my bachelor thesis at the `}
 
-        <Link href={whWebsite} target="_blank">
+        <CBStyledLink href={whWebsite} target="_blank">
           WH
-        </Link>
+        </CBStyledLink>
 
         {`. The player finds himself on a farm, helping an elderly farmer with
         harvesting and other tasks.`}
@@ -39,9 +39,9 @@ export const projects: Project[] = [
         {`A game simulating the sport of boxing in virtual reality. This project
         was made by our group of 6 students from the `}
 
-        <Link href={whWebsite} target="_blank">
+        <CBStyledLink href={whWebsite} target="_blank">
           WH
-        </Link>
+        </CBStyledLink>
 
         {` as part of our respective curricula. It features a rhythm-based game
         mode with multiple difficulties, progress recording and character
@@ -62,12 +62,12 @@ export const projects: Project[] = [
         of a song, measured in beats per minute (bpm). The tool is usually part
         of a `}
 
-        <Link
+        <CBStyledLink
           href="https://en.wikipedia.org/wiki/Digital_audio_workstation"
           target="_blank"
         >
           DAW
-        </Link>
+        </CBStyledLink>
 
         {`, installed on a computer. This project is meant to make the tool
         browser-based.`}
