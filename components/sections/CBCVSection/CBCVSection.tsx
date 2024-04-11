@@ -28,6 +28,7 @@ function CBCVSection(): JSX.Element {
       >
         <CBTextGradient variant="h1">CV</CBTextGradient>
       </Typography>
+
       <Typography
         sx={{
           textAlign: "justify",
@@ -37,18 +38,21 @@ function CBCVSection(): JSX.Element {
       >
         This is an overview of my work experience, education and skillset.
       </Typography>
+
       <motion.div {...getDefaultAnimation()}>
         <CBCVTimelineCard
           title="Work experience"
           bulletPoints={workExperienceBulletPoints}
         />
       </motion.div>
+
       <motion.div {...getDefaultAnimation()}>
         <CBCVTimelineCard
           title="Education"
           bulletPoints={educationBulletPoints}
         />
       </motion.div>
+
       <motion.div {...getDefaultAnimation()}>
         <CBSkillset />
       </motion.div>
