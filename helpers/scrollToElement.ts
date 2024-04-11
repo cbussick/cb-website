@@ -19,6 +19,6 @@ export const scrollToElement = (
     e.preventDefault();
     element?.scrollIntoView({ behavior: "smooth" });
 
-    router.push("");
+    router.push("", { scroll: false });
   }
 };

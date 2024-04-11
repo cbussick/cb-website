@@ -83,23 +83,23 @@ function CBHeader(): JSX.Element {
       </Button>
     </Link>
   ) : (
-    <Link href={gitHubLink} target="_blank">
-      <IconButton
-        sx={{
-          transition: "0.2s",
-          "&& .MuiTouchRipple-child": {
-            color: (t) => t.palette.text.primary,
-            opacity: 0.3,
-          },
-          "&:hover": {
-            bgcolor: "transparent",
-            color: (t) => t.palette.primary.main,
-          },
-        }}
-      >
-        <GitHub titleAccess="Me on GitHub" />
-      </IconButton>
-    </Link>
+    <IconButton
+      href={gitHubLink}
+      target="_blank"
+      sx={{
+        transition: "0.2s",
+        "&& .MuiTouchRipple-child": {
+          color: (t) => t.palette.text.primary,
+          opacity: 0.3,
+        },
+        "&:hover": {
+          bgcolor: "transparent",
+          color: (t) => t.palette.primary.main,
+        },
+      }}
+    >
+      <GitHub titleAccess="Me on GitHub" />
+    </IconButton>
   );
 
   const headerElements: JSX.Element[] = headerLinks.map((link) => {
