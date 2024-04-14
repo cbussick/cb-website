@@ -65,26 +65,44 @@ function CBHeader(): JSX.Element {
     />
   );
 
-  const gitHubLink = cbContactInformation.gitHub;
+  const { gitHub } = cbContactInformation;
 
   const GitHubLinkButton = isSmallViewport ? (
-    <Link href={gitHubLink} target="_blank">
+    <Link href={gitHub} target="_blank">
       <Button
         startIcon={<GitHub />}
-        classes={{ startIcon: "link-icon" }}
         sx={{
           p: (t) => t.spacing(2),
-          justifyContent: isMobileViewport ? "flex-start" : undefined,
+          pr: (t) => t.spacing(5),
+          // This notation with alpha/opacity at the end is necessary to have a proper transition with a gradient on hover
+          color: (t) => `${t.palette.text.primary}FF`,
+          "&:hover": {
+            bgcolor: "transparent",
+            [`& .${buttonClasses.startIcon}`]: {
+              color: (t) => t.palette.primary.main,
+            },
+            [`& .${typographyClasses.root}`]: {
+              color: (t) => `${t.palette.text.primary}00`,
+              background: getCBGradient(),
+              backgroundClip: "text",
+            },
+          },
+          [`& .${buttonClasses.startIcon}`]: {
+            transition: "0.2s",
+          },
+          "&& .MuiTouchRipple-child": {
+            opacity: 0.3,
+          },
         }}
       >
-        <Typography variant="subtitle1" component="span" className="link-label">
+        <Typography variant="subtitle1" component="span">
           Me on GitHub
         </Typography>
       </Button>
     </Link>
   ) : (
     <IconButton
-      href={gitHubLink}
+      href={gitHub}
       target="_blank"
       sx={{
         transition: "0.2s",
