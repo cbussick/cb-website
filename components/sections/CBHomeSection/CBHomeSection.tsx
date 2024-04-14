@@ -1,7 +1,7 @@
 "use client";
 
 import { CBStyledLink } from "@/components/CBStyledLink/CBStyledLink";
-import { Box, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cbContactInformation } from "../../../data/cbContactInformation";
@@ -12,6 +12,7 @@ import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 
 function CBHomeSection(): JSX.Element {
   const theme = useTheme();
+  const isMobileViewport = useMediaQuery(theme.breakpoints.down("sm"));
 
   const { firstName } = cbContactInformation;
 
@@ -72,16 +73,23 @@ function CBHomeSection(): JSX.Element {
       </Typography>
 
       <Stack
-        spacing={2}
-        alignSelf="center"
+        spacing={1}
+        width="100%"
+        alignItems="center"
         component={motion.figure}
         {...getDefaultAnimation(0.6)}
       >
-        <Box width={600} height={450} position="relative">
+        <Box
+          width={isMobileViewport ? "100%" : 600}
+          height={450}
+          position="relative"
+        >
           <Image
             src="/resources/me-and-bruno.jpg"
             alt="Me and Bruno"
             fill
+            sizes="100vw"
+            priority
             style={{
               objectFit: "cover",
               boxShadow: theme.shadows[10],
